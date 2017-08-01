@@ -1,4 +1,4 @@
-package practice3;
+package goodsApp;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package practice3;
+package calcApp;
 
 public abstract class Arithmetic {
 	private int a = 0;

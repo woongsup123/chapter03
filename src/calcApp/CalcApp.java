@@ -1,4 +1,4 @@
-package practice3;
+package calcApp;
 
 import java.util.Scanner;
 

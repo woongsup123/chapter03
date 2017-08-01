@@ -1,4 +1,4 @@
-package practice3;
+package calcApp;
 
 public class Div extends Arithmetic{
 	

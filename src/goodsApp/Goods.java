@@ -1,4 +1,4 @@
-package practice3;
+package goodsApp;
 
 public class Goods {
 	private String type = "";
