@@ -1,8 +1,13 @@
 package practice3;
 
 public class Account {
-	private String accountNo;
-	private int balance;
+	private String accountNo = "";
+	private int balance = 0;
+	
+	public Account(String accountNo) {
+		this.accountNo = accountNo;
+		System.out.println(accountNo + "계좌가 개설되었습니다.");
+	}
 	
 	public void save(int amount) {
 		balance += amount;
