@@ -15,5 +15,7 @@ public class Prob3 {
 			sum += i;
 		}
 		System.out.println("결과 값: " + sum);
+		
+		scan.close();
 	}
 }

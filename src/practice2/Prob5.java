@@ -46,5 +46,7 @@ public class Prob5 {
 				answer = in.next();
 			}
 		}
+		
+		in.close();
 	}
 }

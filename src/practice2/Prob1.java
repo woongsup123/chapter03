@@ -15,6 +15,8 @@ public class Prob1 {
 		for (int unit : units) {
 			price = LeftOver(price, unit);
 		}
+		
+		scan.close();
 	}
 		
 	static int LeftOver(int total, int unit) {

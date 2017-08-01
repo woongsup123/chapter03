@@ -30,5 +30,7 @@ public class GoodsApp {
 			System.out.println(goods[i].getType() + "(가격: " + goods[i].getPrice() + "원)이 "
 								+ goods[i].getNum() + "개 입고 되었습니다.");
 		}
+		
+		in.close();
 	}
 }

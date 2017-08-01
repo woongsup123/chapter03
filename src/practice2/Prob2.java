@@ -16,7 +16,8 @@ public class Prob2 {
         }
         
         System.out.println("평균은 " + sum / intArray.length + " 입니다.");
-
+        
+        in.close();
 	}
 
 }

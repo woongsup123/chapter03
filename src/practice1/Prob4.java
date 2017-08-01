@@ -14,6 +14,7 @@ public class Prob4 {
 		for (char c : str.toCharArray()) {
 			System.out.println(outputStr+=c);
 		}
+		scan.close();
 	}
 
 }
