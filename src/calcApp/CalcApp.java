@@ -37,8 +37,8 @@ public class CalcApp {
 					break;
 				}
 			}
-			
-			double ans = arith.calculate(Double.parseDouble(nums[0]), Double.parseDouble(nums[1]));
+			arith.setValue(Double.parseDouble(nums[0]), Double.parseDouble(nums[1]));
+			double ans = arith.calculate(arith.getA(), arith.getB());
 			System.out.println(ans);
 		}
 	}
