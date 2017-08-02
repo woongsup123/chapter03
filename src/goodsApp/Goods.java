@@ -4,7 +4,7 @@ public class Goods {
 	private String type = "";
 	private int price = 0;
 	private int num = 0;
-	
+	private static int stocks = 0;
 	public Goods() {
 
 	}
@@ -31,6 +31,12 @@ public class Goods {
 	}
 	public void setNum(int num) {
 		this.num = num;
+	}
+	public static int getStocks() {
+		return stocks;
+	}
+	public static void setStocks(int stocks) {
+		Goods.stocks = stocks;
 	}
 	
 	

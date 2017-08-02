@@ -22,6 +22,8 @@ public class GoodsApp {
 			goods[i].setType(str[0]);
 			goods[i].setPrice(Integer.parseInt(str[1]));
 			goods[i].setNum(Integer.parseInt(str[2]));
+			
+			Goods.setStocks(Goods.getStocks() + Integer.parseInt(str[2]));
 		
 		}
 		
@@ -30,7 +32,7 @@ public class GoodsApp {
 			System.out.println(goods[i].getType() + "(가격: " + goods[i].getPrice() + "원)이 "
 								+ goods[i].getNum() + "개 입고 되었습니다.");
 		}
-		
+		System.out.println("총 입고 개수: " + Goods.getStocks());
 		in.close();
 	}
 }
