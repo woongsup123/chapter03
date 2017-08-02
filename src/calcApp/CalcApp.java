@@ -43,27 +43,11 @@ public class CalcApp {
 				nums.add(Double.parseDouble(numsStr.get(i)));
 			}
 			
-			for (int i = 0; i < arith.size(); i++) {
-				if (arith.get(i) instanceof Mul || arith.get(i) instanceof Div) {
-					double update = arith.get(i).calculate(nums.get(i), nums.get(i+1));
-					nums.set(i, update);
-					nums.remove(i+1);
-					arith.remove(i);
-					i--;
-				}
-			}
-			for (int i = 0; i < arith.size(); i++) {
-				double update = arith.get(i).calculate(nums.get(i), nums.get(i+1));
-				nums.set(i, update);
-				nums.remove(i+1);
-				arith.remove(i);
-				i--;
-			}
-			System.out.println(nums.get(0));
+			System.out.println(calculate(arith, nums));
 		}
 	}
 	
-	public static String concatenate(String str) {
+	private static String concatenate(String str) {
 		String sum = "";
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) != ' ') {
@@ -72,5 +56,27 @@ public class CalcApp {
 		}
 		return sum;
 	}
-
+	
+	private static Double calculate(List<Arithmetic> arith, List<Double> nums) {
+		
+		
+		for (int i = 0; i < arith.size(); i++) {
+			if (arith.get(i) instanceof Mul || arith.get(i) instanceof Div) {
+				double update = arith.get(i).calculate(nums.get(i), nums.get(i+1));
+				nums.set(i, update);
+				nums.remove(i+1);
+				arith.remove(i);
+				i--;
+			}
+		}
+		for (int i = 0; i < arith.size(); i++) {
+			double update = arith.get(i).calculate(nums.get(i), nums.get(i+1));
+			nums.set(i, update);
+			nums.remove(i+1);
+			arith.remove(i);
+			i--;
+		}
+		
+		return nums.get(0);
+	}
 }
