@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class GoodsApp {
 	
-	static final int NUM = 3;
+	private static final int NUM = 3;
 	
 	public static void main(String[] args) {
 	
