@@ -14,7 +14,7 @@ public class CalcApp {
 		
 		while(!(input = scan.nextLine()).equals("quit")) {
 			
-			input = concatenate(input);
+			input = removeSpace(input);
 			
 			List<String> numsStr = Arrays.asList(input.split("[\\+\\-\\*\\/\\(\\)]"));
 			List<Double> nums = new ArrayList<>();
@@ -88,7 +88,7 @@ public class CalcApp {
 		}
 	}
 
-	private static String concatenate(String str) {
+	private static String removeSpace(String str) {
 		
 		String sum = "";
 		
