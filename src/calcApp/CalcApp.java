@@ -37,29 +37,36 @@ public class CalcApp {
 				
 				char c = input.charAt(i);
 				
-				if (c == '+') {
+				switch (c) {
+				
+				case '+':
 					arith.add(new Add());
-				}
+					break;
 				
-				else if ( c == '-' ) {
+				case '-':
 					arith.add(new Sub());
-				}
+					break;
 				
-				else if ( c == '*' ) {
+				case '*':
 					arith.add(new Mul());
-				}
-				
-				else if ( c == '/' ) {
+					break;
+					
+				case '/':
 					arith.add(new Div());
-				}
+					break;
 				
-				else if ( c == '(' ) {
+				case '(':
 					openBracketPos = arith.size();
-				}
+					break;
 				
-				else if ( c == ')' ) {
+				case ')':
 					closeBracketPos = arith.size();
 					calculate(arith, nums, openBracketPos, closeBracketPos);
+					break;
+					
+				default:
+					break;
+						
 				}
 			}
 			
