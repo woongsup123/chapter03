@@ -17,7 +17,7 @@ public class CalcApp {
 			input = concatenate(input);
 			
 			List<String> numsStr = Arrays.asList(input.split("[\\+\\-\\*\\/\\(\\)]"));
-			List<Double> nums = new ArrayList<Double>();
+			List<Double> nums = new ArrayList<>();
 			
 			for (int i = 0; i < numsStr.size(); i++) {
 				
@@ -70,11 +70,24 @@ public class CalcApp {
 				}
 			}
 			
-			System.out.println(calculate(arith, nums, 0, arith.size()));
+			double ans = calculate(arith, nums, 0, arith.size());
+			
+			printAnswer(ans);
+			
 		}
 		scan.close();
 	}
 	
+	private static void printAnswer(double ans) {
+		
+		if (isInt(ans)) {
+			System.out.println((int)ans);
+		}
+		else {
+			System.out.println(ans);
+		}
+	}
+
 	private static String concatenate(String str) {
 		
 		String sum = "";
@@ -89,7 +102,7 @@ public class CalcApp {
 		return sum;
 	}
 	
-	private static Double calculate(List<Arithmetic> arith, List<Double> nums,
+	private static double calculate(List<Arithmetic> arith, List<Double> nums,
 									int init, int end) { //from initial sign index to final sign index
 		
 		for (int i = init; i < end; i++) {
@@ -121,6 +134,7 @@ public class CalcApp {
 	{  
 		try
 		{
+			@SuppressWarnings("unused")
 			double d = Double.parseDouble(str);  
 		}
 		catch(NumberFormatException nfe)
@@ -128,5 +142,12 @@ public class CalcApp {
 			return false;
 		}
 		return true;  
+	}
+	
+	public static boolean isInt(double d) {
+		if (d % 1 == 0) {
+			return true;
+		}
+		return false;
 	}
 }

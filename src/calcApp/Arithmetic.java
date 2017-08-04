@@ -1,8 +1,8 @@
 package calcApp;
 
 public abstract class Arithmetic {
-	private double a = 0;
-	private double b = 0;
+	private double a;
+	private double b;
 	
 	public void setValue(double a, double b) {
 		this.a = a;
