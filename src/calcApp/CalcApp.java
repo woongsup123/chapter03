@@ -130,18 +130,9 @@ public class CalcApp {
 		return nums.get(0);
 	}
 	
-	public static boolean isNumeric(String str)  
-	{  
-		try
-		{
-			@SuppressWarnings("unused")
-			double d = Double.parseDouble(str);  
-		}
-		catch(NumberFormatException nfe)
-		{
-			return false;
-		}
-		return true;  
+	public static boolean isNumeric(String str)
+	{
+	  return str.matches("-?\\d+(\\.\\d+)?");
 	}
 	
 	public static boolean isInt(double d) {
